@@ -2,17 +2,14 @@
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import Logo from '@/components/Logo';
-import Background from '@/components/Background';
 
 const Index = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="relative min-h-screen flex flex-col">
-      <Background />
-      
+    <div className="min-h-screen flex flex-col">
       {/* Header */}
-      <header className="w-full py-4 px-6 flex items-center justify-between">
+      <header className="w-full py-4 px-6 flex items-center justify-between glass-card sticky top-0 z-10">
         <Logo size="large" />
         <div className="space-x-4">
           <Button 
@@ -26,9 +23,9 @@ const Index = () => {
       </header>
       
       {/* Hero section */}
-      <main className="flex-1 flex flex-col md:flex-row items-center justify-center px-4 py-12">
-        <div className="max-w-3xl text-center md:text-left">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+      <main className="flex-1 flex flex-col md:flex-row items-center justify-center px-4 sm:px-6 md:px-8 py-12 max-w-7xl mx-auto w-full">
+        <div className="w-full md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="text-blokdoc-cyan">Secure</span> Document Verification 
             <span className="text-blokdoc-purple"> on the Blockchain</span>
           </h1>
@@ -58,7 +55,7 @@ const Index = () => {
         </div>
         
         {/* Abstract 3D element for visual interest */}
-        <div className="hidden md:block relative w-96 h-96">
+        <div className="hidden md:block relative w-full md:w-1/2">
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-gradient-to-r from-blokdoc-cyan/30 to-blokdoc-purple/30 filter blur-xl animate-pulse-glow"></div>
           <div className="absolute top-1/4 left-1/3 w-32 h-32 rounded-full bg-blokdoc-cyan/20 filter blur-md animate-float"></div>
           <div className="absolute bottom-1/3 right-1/4 w-40 h-40 rounded-full bg-blokdoc-purple/20 filter blur-md animate-float" style={{ animationDelay: '2s' }}></div>
@@ -105,7 +102,7 @@ const Index = () => {
       </section>
       
       {/* Footer */}
-      <footer className="w-full py-8 px-4 mt-auto">
+      <footer className="w-full py-8 px-4 mt-auto glass-card">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <Logo />
