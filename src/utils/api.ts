@@ -145,6 +145,6 @@ export const getUserDocuments = async (userAddress: string = '0x0') => {
     name: `Document ${index + 1}.pdf`,
     hash: `0x${Math.random().toString(16).substring(2, 66)}`,
     timestamp: new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000).toISOString(),
-    status: Math.random() > 0.2 ? "verified" : "pending" as "verified" | "notVerified" | "pending" | "error"
+    status: validStatuses[Math.random() > 0.2 ? 0 : 2] // Either 'verified' or 'pending'
   }));
 };
